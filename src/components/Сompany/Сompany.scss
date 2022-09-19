@@ -1,0 +1,54 @@
+@use "../../scss/index.scss" as *;
+
+.Сompany {
+  background-color: $black;
+
+  &__wrapper {
+    display: flex !important;
+  }
+
+  &__text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  &Numbers {
+    @include flex(space-between, center, row);
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 150px;
+    gap: 50px;
+  }
+
+  &__container {
+    @include flex(center, center, row);
+  }
+
+  &__icon {
+    width: 7px;
+    height: 7px;
+
+    & path {
+      fill: $white !important;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Сompany {
+    &Numbers {
+      max-width: 450px;
+      row-gap: 25px;
+      column-gap: 0px;
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  .Сompany {
+    &Numbers {
+      flex-direction: column;
+      margin-bottom: 100px;
+    }
+  }
+}

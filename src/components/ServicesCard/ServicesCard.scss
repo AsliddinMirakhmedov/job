@@ -1,0 +1,44 @@
+@use "../../scss/index.scss" as *;
+
+.servicesCard {
+  @include flex(start, center, column);
+
+  &__img {
+    width: 100px;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+
+  &__text {
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 18px;
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 100px) {
+  .servicesCard {
+
+    &__img {
+      width: 60px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 1.2em;
+    }
+  }
+}

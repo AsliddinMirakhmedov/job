@@ -1,0 +1,22 @@
+@use "../../scss/index.scss" as *;
+
+.title {
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: $purple;
+  text-align: center;
+}
+
+.white {
+  color: $white;
+}
+
+.black {
+  color: $black;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 20px;
+  }
+}

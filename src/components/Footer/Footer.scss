@@ -1,0 +1,14 @@
+@use "../../scss/index.scss" as *;
+
+footer {
+  height: 100px;
+  @include flex(center, center, row);
+
+  & p {
+    text-align: center;
+
+    & a {
+      text-decoration: underline;
+    }
+  }
+}

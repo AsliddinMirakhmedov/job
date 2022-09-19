@@ -1,0 +1,21 @@
+@use "../../scss/index.scss" as *;
+
+.contactsCards {
+  @include flex(space-between, start, row);
+  border: 1px solid $black;
+  border-right: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+  .contactsCards {
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    gap: 10px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}

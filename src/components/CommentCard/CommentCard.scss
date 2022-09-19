@@ -1,0 +1,69 @@
+@use "../../scss/index" as *;
+
+.commentCard {
+  border-right: 1px solid $black;
+  @include flex(start, center, column);
+  max-width: 600px;
+  width: 100%;
+  height: 430px;
+
+  &__img {
+    width: 60px;
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .commentCard__img {
+    width: 40px;
+  }
+
+  .commentCard__title {
+    font-size: 23px;
+  }
+
+  .commentCard__text {
+    font-size: 16px;
+  }
+
+  .commentCard {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .commentCard {
+    border: 1px solid $black;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .commentCard {
+    height: 350px;
+  }
+
+  .commentCard__img {
+    padding-top: 50px;
+  }
+
+  .commentCard__title {
+    font-size: 21px;
+  }
+
+  .commentCard__text {
+    font-size: 15px;
+    width: 247px;
+  }
+}

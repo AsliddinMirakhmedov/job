@@ -1,0 +1,19 @@
+@use "../../scss/index.scss" as *;
+
+.text {
+  line-height: 1.3em;
+  font-size: 36px;
+  color: $black;
+  font-weight: 700;
+  text-align: center;
+}
+
+.white {
+  color: $white;
+}
+
+@media screen and (max-width: 600px) {
+  .text {
+    font-size: 28px;
+  }
+}

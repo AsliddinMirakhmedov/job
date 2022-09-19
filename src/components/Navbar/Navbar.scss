@@ -1,0 +1,144 @@
+@use "../../scss/index.scss" as *;
+
+.nav {
+  background-color: $white;
+  position: sticky;
+  overflow: hidden;
+  z-index: 100;
+  top: 0px;
+
+  &bar {
+    @include flex(space-between, center, row);
+    height: 80px;
+
+    &__right {
+      @include flex(space-between, space-between, row);
+      flex-grow: 0.5;
+    }
+  }
+}
+
+.overflow {
+  overflow: visible !important;
+}
+
+.list {
+  @include flex(space-between, center, row);
+  gap: 20px;
+}
+
+.link {
+  color: $black;
+  font-family: $arial;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+#active {
+  color: $purple;
+}
+
+.logo h1 {
+  font-weight: 700;
+}
+
+.menu {
+  width: 43px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  display: none;
+
+  &.active .menu__item {
+    background-color: $white;
+  }
+}
+
+.menu.active .menu__item:nth-child(1) {
+  left: -100%;
+}
+
+.menu.active .menu__item:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu.active .menu__item:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu.active .menu__item:nth-child(4) {
+  left: 100%;
+}
+
+.menu__item {
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+}
+
+.menu__item:nth-child(1) {
+  top: 10px;
+}
+
+.menu__item:nth-child(2) {
+  top: 20px;
+}
+
+.menu__item:nth-child(3) {
+  top: 20px;
+}
+
+.menu__item:nth-child(4) {
+  top: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    display: block;
+
+    &.active {
+      right: 0% !important;
+    }
+  }
+
+  .navbar__right {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 430px;
+    background-color: $black;
+    opacity: 0.9;
+    right: -100%;
+    transition: 0.5s;
+
+    &.active {
+      right: 0;
+      transition: 0.5s;
+    }
+  }
+
+  .list {
+    flex-direction: column;
+
+    & .link {
+      color: $white;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar__right {
+    width: 100%;
+    opacity: unset;
+  }
+}

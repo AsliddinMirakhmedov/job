@@ -1,0 +1,52 @@
+@use "../../scss/index.scss" as *;
+
+.about {
+  @include flex(space-between, start, row);
+
+  &__img {
+    max-width: 900px;
+    width: 100%;
+    background-image: url("../../images/4.png");
+    height: 830px;
+    background-size: cover;
+  }
+
+  &__title {
+    text-align: left;
+    padding-top: 80px;
+  }
+
+  &__text {
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    &__info {
+      color: $black;
+      line-height: 1.7em;
+      font-size: 20px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about {
+    &__img {
+      display: none;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__text__info {
+      font-size: 17px;
+      text-align: justify;
+    }
+
+    margin-bottom: 50px;
+  }
+}

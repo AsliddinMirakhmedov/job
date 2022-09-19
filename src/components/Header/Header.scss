@@ -1,0 +1,128 @@
+@use "../../scss/index.scss" as *;
+
+.header {
+  position: relative;
+
+  &__img {
+    height: 800px;
+    background-size: cover;
+    position: relative;
+    z-index: -10;
+    display: block;
+    background-image: url("../../images/bd.png");
+    background-position: center;
+  }
+}
+
+.info {
+  @include flex(start, unset, column);
+  margin: 0 auto;
+  margin-top: 160px;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+
+  &__title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 70px;
+    letter-spacing: -0.02em;
+    font-family: $roboto;
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    @include flex(space-between, center, row);
+    max-width: 700px;
+  }
+
+  &__text {
+    width: 500px;
+    text-align: justify;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .header {
+    &__img {
+      height: 700px;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .info {
+    @include flex(start, center, column);
+    margin: 0 auto;
+    margin-top: 150px;
+
+    &__wrapper {
+      @include flex(start, center, column);
+      row-gap: 20px;
+    }
+
+    &__title {
+      font-size: 60px;
+    }
+
+    &__text {
+      font-size: 18px;
+      max-width: 580px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info {
+    &__title {
+      font-size: 45px;
+    }
+
+    &__text {
+      font-size: 16px;
+      max-width: 430px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    &__img {
+      height: 550px;
+    }
+  }
+
+  .info {
+    margin-top: 130px;
+
+    &__title {
+      font-size: 35px;
+    }
+
+    &__text {
+      font-size: 15px;
+      max-width: 340px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .info {
+    &__title {
+      font-size: 28px;
+    }
+
+    &__text {
+      font-size: 14px;
+      max-width: 275px;
+    }
+  }
+}

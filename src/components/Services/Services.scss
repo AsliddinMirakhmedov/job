@@ -1,0 +1,32 @@
+@use "../../scss/index.scss" as *;
+
+.services {
+  margin-top: 150px;
+  margin-bottom: 150px;
+
+  &Cards {
+    @include flex(space-between, center, row);
+    margin-top: 100px;
+  }
+
+  &__title {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .services {
+    &Cards {
+      @include flex(center, center, row);
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .services {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}

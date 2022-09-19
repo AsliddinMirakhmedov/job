@@ -1,0 +1,27 @@
+@use "../../scss/index.scss" as *;
+
+.clients {
+  background-color: $pink;
+  padding-bottom: 50px;
+
+  &__text {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  &__img {
+    width: 160px;
+  }
+
+  &__images {
+    @include flex(space-between, center, row);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .clients__images {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
